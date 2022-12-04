@@ -81,7 +81,7 @@ public abstract class AnimalRestaurantWindow implements EnableChangeTabWindow{
         App.tabContext.putIfAbsent(TabEnum.of(getTabName()),this);
 
         this.loadClickPoint();
-        oneTimeClickPoint.forEach(ClickPoint::click);
+//        oneTimeClickPoint.forEach(ClickPoint::click);
     }
     protected abstract List<ClickPoint> loadRoutineClickPoint();
 

@@ -224,7 +224,7 @@ public class WindowUtil {
 
         Core.MinMaxLocResult re = WindowUtil.matchTemplate(
                 WindowUtil.captureWindowMat(WindowUtil.findProgramWindowRectangle("动物餐厅")),
-                new File(IMAGES_PATH + "check_can_close_ad.png"));
+                new File(IMAGES_PATH + "check_cant_ad.png"));
         System.out.println(JSONUtil.parseObj(re));
     }
 }

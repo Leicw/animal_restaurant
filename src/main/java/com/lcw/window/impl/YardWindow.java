@@ -14,7 +14,17 @@ public class YardWindow extends AnimalRestaurantWindow {
 
     @Override
     protected List<ClickPoint> loadRoutineClickPoint() {
-        return new ArrayList<>();
+        List<ClickPoint> clickPoints = new ArrayList<>();
+        ClickPoint openCollection = new ClickPoint("点开集合", 535, 1040, 50, 50);
+        openCollection.setExecNext(e -> super.check(new File(WindowUtil.IMAGES_PATH + "check_can_collection.png"),0.9));
+        openCollection.setNext(ClickPoint.adClickPoint(305,735,100,25));
+        clickPoints.add(openCollection);
+
+        ClickPoint clickBlank = new ClickPoint("因为集合时间未到,点击空白", 325, 220, 50, 50);
+        clickBlank.setExecThis(e -> super.check(new File(WindowUtil.IMAGES_PATH + "check_cant_ad.png"),0.9));
+        clickPoints.add(clickBlank);
+
+        return clickPoints;
     }
 
     @Override

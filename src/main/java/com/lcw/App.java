@@ -68,6 +68,7 @@ public class App {
             for (int i = 0; i < 10; i++) {
                 restaurantWindow.run(rect);
             }
+            yardWindow.run(rect);
             flowerWindow.run(rect);
         }
     }
